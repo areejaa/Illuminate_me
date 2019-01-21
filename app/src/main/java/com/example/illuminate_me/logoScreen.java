@@ -30,8 +30,8 @@ public class logoScreen extends AppCompatActivity {
         public void run (){
 
             try {
-                // to make the logo appear for 3 seconds
-                sleep(3000);}
+                // to make the logo appear for 2 seconds
+                sleep(2000);}
             catch (InterruptedException e){
                 e.printStackTrace();
             }

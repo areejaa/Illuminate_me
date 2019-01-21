@@ -1,5 +1,6 @@
 package com.example.illuminate_me;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +10,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //to be changed
+    public static int chosenButton;
+    public static final int UPLOAD_PIC =1;
+    public static final int TAKE_PIC =2;
    private  Button takePic;
    private Button uploadPic;
     @Override
@@ -25,16 +30,20 @@ public class MainActivity extends AppCompatActivity {
         takePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+              chosenButton=TAKE_PIC;
                 //call user.takePic or write the code directly
-              takePic.setText("hi");
+                Intent intent = new Intent (MainActivity.this, uploadImageActivity.class);
+                startActivity(intent);
             }
         });
         //(2)
         uploadPic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                chosenButton=UPLOAD_PIC;
                 //call user.uploadPic or write the code directly
-                uploadPic.setText("hi again");
+                Intent intent = new Intent (MainActivity.this, uploadImageActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -43,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
         takePic = (Button) findViewById(R.id.takePic_btn);
         uploadPic = (Button) findViewById(R.id.uploadPic_btn);
-
-
     }
+
 }
