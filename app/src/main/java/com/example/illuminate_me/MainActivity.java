@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //to remove top bar
-        getSupportActionBar().hide();
+       // getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
         //initiate buttons
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
               chosenButton=TAKE_PIC;
                 //call user.takePic or write the code directly
-                Intent intent = new Intent (MainActivity.this, uploadImageActivity.class);
+                Intent intent = new Intent (MainActivity.this, UploadTakeImage.class);
                 startActivity(intent);
             }
         });
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 chosenButton=UPLOAD_PIC;
                 //call user.uploadPic or write the code directly
-                Intent intent = new Intent (MainActivity.this, uploadImageActivity.class);
+                Intent intent = new Intent (MainActivity.this, UploadTakeImage.class);
                 startActivity(intent);
             }
         });
@@ -50,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setbtnviews (){
 
-        takePic = (Button) findViewById(R.id.takePic_btn);
-        uploadPic = (Button) findViewById(R.id.uploadPic_btn);
+        takePic = findViewById(R.id.takePic_btn);
+        uploadPic = findViewById(R.id.uploadPic_btn);
     }
 
 }
