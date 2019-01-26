@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    ImageDescription img = new ImageDescription();
+img.speech();
     }
 
     private void setbtnviews (){
