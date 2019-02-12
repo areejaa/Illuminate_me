@@ -47,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    ImageDescription img = new ImageDescription();
-img.speech();
     }
 
     private void setbtnviews (){
@@ -58,3 +56,6 @@ img.speech();
     }
 
 }
+
+
+

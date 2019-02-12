@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageToUpload"
-        android:layout_width="307dp"
-        android:layout_height="269dp"
+        android:layout_width="361dp"
+        android:layout_height="508dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -22,4 +22,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:color/background_light" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Upload take image"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="2dp" />
 </android.support.constraint.ConstraintLayout>
